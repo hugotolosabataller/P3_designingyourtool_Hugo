@@ -1,0 +1,225 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+}
+
+/* TIPOGRAFÍA */
+@font-face {
+  font-family: Pixel;
+  src: url("font/PixelifySans.ttf");
+}
+
+/* CONTENEDOR PRINCIPAL */
+#contenedor-flex {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* COLUMNA CONTROLES */
+#sidebar {
+    flex: 0 0 15%; 
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto; 
+    background-color: #ffffff;
+}
+
+h2 {
+    font-family: Pixel;
+    font-size: 350%;
+    font-weight: 600;
+    text-align: center;
+    margin: 0%;
+    line-height: 75%;
+    color: #333333;
+}
+
+label {
+    font-family: Pixel;
+    font-weight: 400;
+    color: #333333;
+}
+
+p {
+    font-family: Pixel;
+    font-weight: 400;
+    color: #333333;
+}
+
+/* ZONA DE CANVAS */
+#zona-canvas {
+    flex: 0 0 85%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    background-color: #eeeeee;
+    overflow: auto; 
+}
+
+/* CANVAS */
+#canvas-container {
+    line-height: 0; 
+}
+
+#sidebar input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#sidebar label {
+    display: block;
+    margin-top: 5px;
+}
+
+/* BOTONES */
+
+/* COLUMNAS Y FILAS */
+#sidebar input[type="number"] { 
+    width: 95%;
+    padding: 4px;
+    border: 2px solid #333333;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333333;
+    outline: none;
+    transition: all 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #5ec2c2; 
+    background-color: #ffffff;
+}
+
+/* COLOR */
+input[type="color"] {
+    border: 2px solid #333333;
+    border-radius: 7px;
+    height: 35px;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* INTERIOR COLOR */
+input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 4px;
+}
+
+/* SLIDER */
+input[type="range"] {
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* BARRA SLIDER */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #dddddd;
+    height: 8px;
+    border-radius: 4px;
+}
+
+/* BOTÓN SLIDER */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    background: #333333;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-top: -5px; 
+    transition: transform 0.1s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2); 
+}
+
+/* CHECKBOX */
+#sidebar input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #333333;
+    border-radius: 2px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+#sidebar input[type="checkbox"]:checked {
+    background-color: #ffffff; /* COLOR ACTIVO */
+    position: relative;
+}
+
+/* CHECK INTERNO */
+#sidebar input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #333333;
+    top: 3px;
+    left: 3px;
+}
+
+#labelCheck {
+    font-family: Pixel;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* SEPARADORES */
+hr {
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    margin: 10px 0;
+}
+
+/* BOTÓN */
+
+#sidebar button {
+    width: 100%;
+    font-family: Pixel;
+    font-size: 1.1rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 2px solid #333333;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+/* BOTÓN GUARDAR */
+#btnGuardar {
+    background-color: #333333;
+    color: white;
+}
+
+#btnGuardar:hover {
+    background-color: #5ec2c2;
+    color: #333333;
+}
+
+/* BOTÓN LIMPIAR */
+#btnLimpiar {
+    background-color: #ffffff;
+    color: #ed225d;
+    border-color: #ed225d;
+}
+
+#btnLimpiar:hover {
+    background-color: #ed225d;
+    color: white;
+}
